@@ -1,0 +1,27 @@
+<resources>
+
+
+    <string name="app_name">Charging Animation</string>
+
+    <string name="overlay">Overlay permission required to display animation</string>
+
+
+    <string name="search_menu_title">Search</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="string_apply">Apply</string>
+    <string name="string_closing_method">Closing method</string>
+    <string name="string_settings">Settings</string>
+    <string name="string_show">Show only on lock screen</string>
+    <string name="string_show_anim">Show animation</string>
+    <string name="string_show_per">Show battery percentage</string>
+
+    <!--    Real  AD Ids-->
+    <!--    <string name="appId">ca-app-pub-9257301845698534~4265775343</string>-->
+    <!--    <string name="bannerAd">ca-app-pub-9257301845698534/5841746740</string>-->
+    <!--    <string name="interstitialAd">ca-app-pub-9257301845698534/3215583408</string>-->
+    <!--    <string name="nativeAd">ca-app-pub-9257301845698534/6700366990</string>-->
+    <!--    <string name="openAd">ca-app-pub-9257301845698534/5139873312</string>-->
+
+    <!--    Test AD Ids-->
+    <string name="appId">ca-app-pub-9257301845698534~4265775343</string>
+</resources>

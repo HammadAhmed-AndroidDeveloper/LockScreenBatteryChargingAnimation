@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name="com.example.lockScreen.battery.charging.animation.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme_AnimBattery"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name="com.example.lockScreen.battery.charging.animation.activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.lockScreen.battery.charging.animation.activities.LockScreenActivity"
+            android:theme="@style/FullScreenTheme" />
+
+        <activity
+            android:name="com.example.lockScreen.battery.charging.animation.activities.AnimationPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.lockScreen.battery.charging.animation.activities.AllAnimsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.lockScreen.battery.charging.animation.activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.example.lockScreen.battery.charging.animation.service.LockScreenBatteryAnimationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/appId" />
+    </application>
+
+</manifest>
